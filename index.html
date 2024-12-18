@@ -19,7 +19,7 @@
     </head>
 
     <body class="bg-light text-dark">
-        
+        <!-- Nadpis -->
         <header class="bg-primary text-white text-center py-5">
             <h1 class="display-4 fw-bold mb-0">Výpočet času přenosu souboru</h1>
         </header>
@@ -31,8 +31,16 @@
                     <div class="card-body p-4">
                         <form id="transferForm">
                             <div class="mb-3">
-                                <label for="fileSize" class="form-label">Velikost souboru (v MB)</label>
-                                <input type="number" class="form-control" id="fileSize" placeholder="Zadejte velikost souboru" required>
+                                <label for="fileSize" class="form-label">Velikost souboru</label>
+                                <div class="input-group">
+                                    <input type="number" class="form-control" id="fileSize" placeholder="Zadejte velikost souboru" required>
+                                    <select class="form-select" id="fileUnit">
+                                        <option value="1">B</option>
+                                        <option value="1024">KB</option>
+                                        <option value="1048576" selected>MB</option>
+                                        <option value="1073741824">GB</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="mb-3">
                                 <label for="transferSpeed" class="form-label">Přenosová rychlost (v Mbps)</label>
@@ -48,7 +56,7 @@
             </div>
         </main>
 
-        
+        <!-- Footer -->
         <footer class="text-center py-3 mt-5">
             <p>© 2024 - Petr Vitek, IT2</p>
         </footer>
@@ -65,6 +73,7 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
-        <script src="./js/script.js">
-
-        </script>
+        
+        <script src="./js/script.js"></script>
+    </body>
+</html>
